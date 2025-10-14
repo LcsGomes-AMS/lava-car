@@ -1,4 +1,5 @@
-  /* ==== ESTILO GERAL ==== */
+
+    /* ==== ESTILO GERAL ==== */
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
@@ -48,31 +49,48 @@
       text-shadow: 0 0 10px #ff0000;
     }
 
-    /* ==== TABELAS ==== */
-    .tabela {
-      width: 100%;
-      border-collapse: collapse;
+    /* ==== GRID ==== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
       background: #111;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-    }
-
-    .tabela th, .tabela td {
-      padding: 1rem;
       text-align: center;
-      border-bottom: 1px solid #333;
-    }
-
-    .tabela th {
-      background-color: #ff0000;
-      color: white;
-      font-size: 1.1rem;
-    }
-
-    .tabela tr:hover {
-      background-color: rgba(255, 0, 0, 0.1);
       transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: #ff0000;
+      margin: 0.5rem 0;
+    }
+
+    .card p {
+      color: #ccc;
+      margin-bottom: 0.8rem;
+    }
+
+    .ilustrativo {
+      font-size: 0.8rem;
+      color: #777;
+      font-style: italic;
+      margin-bottom: 0.5rem;
     }
 
     /* ==== BOTÕES ==== */
@@ -125,6 +143,7 @@
       padding: 1rem;
       border-top: 1px solid #ff0000;
       margin-top: 4rem;
+      font-size: 0.9rem;
     }
 
     /* ==== ANIMAÇÃO ==== */
@@ -145,7 +164,5 @@
       header h1 {
         font-size: 2rem;
       }
-      .tabela th, .tabela td {
-        padding: 0.8rem;
-      }
     }
+ 
